@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta lang="en-US">
+<meta charset="utf-8">
+<title>js</title>
+
+<style>
+div{
+    width: 625px;
+    height: 500px;
+    border: 10px solid red;
+    margin: 100px auto;
+}
+input{
+   
+}
+
+</style>
+
+
+<script>
+function bright(){
+    var x=document.getElementById("brightness").value;
+    var y=document.getElementById("pic");
+    y.style.filter="brightness("+x+"%)";
+}
+
+
+function contrast(){
+    var x=document.getElementById("contrast").value;
+    var y=document.getElementById("pic");
+    y.style.filter="contrast("+x+"%)";
+}
+
+function saturate(){
+    var x=document.getElementById("saturate").value;
+    var y=document.getElementById("pic");
+    y.style.filter="saturate("+x+"%)";
+}
+
+
+</script>
+    </head>
+    <body>
+   <center><h1>Image Effects</h1></center>
+   <hr>
+   <div>
+    <img src="a.jpg" alt="a" width="625" id="pic">
+
+    <br><br>
+    <b>Brightness</b>
+    <input type="range" name="" id="brightness" min="0" max="150" oninput="bright()">
+    <b>Contrast</b>
+    <input type="range" name="" id="contrast" min="0" max="400" oninput="contrast()">
+    <b>Saturate</b>
+    <input type="range" name="" id="saturate" min="0" max="400" oninput="saturate()">
+   </div>
+
+   
+    </body>
+</html>
+
+
+
+
